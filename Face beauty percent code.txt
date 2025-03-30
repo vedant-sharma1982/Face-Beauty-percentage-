@@ -1,0 +1,10 @@
+Beauty Percentage Detector body { text-align: center; font-family: Arial, sans-serif; background-color: #fce4ec; padding: 20px; } #image-preview { max-width: 300px; margin-top: 20px; display: none; } #result { font-size: 24px; font-weight: bold; margin-top: 20px; } button { margin-top: 10px; padding: 10px 20px; background-color: #e91e63; color: white; border: none; cursor: pointer; font-size: 16px; } button:hover { background-color: #c2185b; } 
+
+How Beautiful Are You?
+
+ 
+Check Beauty Percentage 
+
+document.getElementById('image-upload').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const reader = new FileReader(); reader.onload = function(e) { document.getElementById('image-preview').src = e.target.result; document.getElementById('image-preview').style.display = 'block'; } reader.readAsDataURL(file); } }); function calculateBeauty() { const beautyScore = Math.floor(Math.random() * 101); document.getElementById('result').innerText = `Your Beauty Score: ${beautyScore}%`; } 
+
+I've created a simple fun-based beauty percentage website where users can upload an image and get a randomly generated beauty score. Let me know if you want any design changes or additional features!
